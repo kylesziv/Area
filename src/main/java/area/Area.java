@@ -8,9 +8,6 @@ import java.io.IOException;
 import com.csvreader.CsvReader;
 
 
-/**
- * Created by kyleszives on 12/24/13.
- */
 public class Area {
 
     public static HashMap<String, ArrayList> zipcodes = new HashMap<String, ArrayList>();
@@ -22,7 +19,6 @@ public class Area {
     private static void loadCSV() {
 
         try {
-//            CsvReader zip = new CsvReader("/Users/kyleszives/Area/src/main/resources/zipcodes.csv");
             CsvReader zip = new CsvReader("src/main/resources/zipcodes.csv");
             zip.readHeaders();
 

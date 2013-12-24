@@ -6,9 +6,6 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 
 
-/**
- * Created by kyleszives on 12/24/13.
- */
 public class zipcodeTest {
 
     @Test

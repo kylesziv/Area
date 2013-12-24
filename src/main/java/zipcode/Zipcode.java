@@ -3,9 +3,7 @@ package zipcode;
 import java.util.ArrayList;
 import area.*;
 
-/**
- * Created by kyleszives on 12/24/13.
- */
+
 public class Zipcode {
 
     public static String toRegion(String zip) {
