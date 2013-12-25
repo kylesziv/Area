@@ -1,5 +1,4 @@
-package area;
-
+package Area;
 
 import java.util.HashMap;
 import java.util.ArrayList;
@@ -7,10 +6,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import com.csvreader.CsvReader;
 
+import Region.Region;
+
 
 public class Area {
 
-    public static HashMap<String, ArrayList> zipcodes = new HashMap<String, ArrayList>();
+    public static HashMap<String, Region> zipcodes = new HashMap<String, Region>();
 
     static {
         loadCSV();
@@ -24,25 +25,22 @@ public class Area {
 
             while(zip.readRecord()) {
 
-                String zipcode = zip.get("Zipcode");
-                String city = zip.get("City");
-                String state = zip.get("State");
-                String latitude = zip.get("Latitude");
-                String longitude = zip.get("Longitude");
-                String gmtOffset = zip.get("GMT");
-                String dst = zip.get("DST");
+                Region currentRegion = new Region(
+                        zip.get("Zipcode"), zip.get("City"), zip.get("State"), zip.get("Latitude"),
+                        zip.get("Longitude"), zip.get("GMT"), zip.get("DST")
+                );
 
-                ArrayList<String> codeData = new ArrayList<String>();
+//                ArrayList<String> codeData = new ArrayList<String>();
+//
+//                codeData.add(zipcode);
+//                codeData.add(city);
+//                codeData.add(state);
+//                codeData.add(latitude);
+//                codeData.add(longitude);
+//                codeData.add(gmtOffset);
+//                codeData.add(dst);
 
-                codeData.add(zipcode);
-                codeData.add(city);
-                codeData.add(state);
-                codeData.add(latitude);
-                codeData.add(longitude);
-                codeData.add(gmtOffset);
-                codeData.add(dst);
-
-                zipcodes.put(zipcode, codeData);
+                zipcodes.put(zip.get("Zipcode"), currentRegion);
             }
 
             zip.close();
