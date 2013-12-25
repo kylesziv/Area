@@ -29,4 +29,4 @@ Converts zipcode toGTM offset
 
 Converts zipcode to observed dst
 -----------------------------------
-` Zipcode.toObserveDST("10013"); // "1" `
+` Zipcode.toObserveDST("10013"); // true `
