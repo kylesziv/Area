@@ -30,16 +30,6 @@ public class Area {
                         zip.get("Longitude"), zip.get("GMT"), zip.get("DST")
                 );
 
-//                ArrayList<String> codeData = new ArrayList<String>();
-//
-//                codeData.add(zipcode);
-//                codeData.add(city);
-//                codeData.add(state);
-//                codeData.add(latitude);
-//                codeData.add(longitude);
-//                codeData.add(gmtOffset);
-//                codeData.add(dst);
-
                 zipcodes.put(zip.get("Zipcode"), currentRegion);
             }
 

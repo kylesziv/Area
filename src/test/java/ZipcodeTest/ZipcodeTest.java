@@ -1,17 +1,16 @@
-package ZipcodeHashTest;
+package ZipcodeTest;
 
+import Zipcode.Zipcode;
 import org.junit.*;
 import static org.junit.Assert.*;
 import java.util.ArrayList;
 
-import Zipcode.ZipcodeHash;
 
-
-public class ZipcodeHashTest {
+public class ZipcodeTest {
 
     @Test
     public void testToRegion() {
-        assertEquals("Pittsburgh, PA", ZipcodeHash.toRegion("15217"));
+        assertEquals("Pittsburgh, PA", Zipcode.toRegion("15217"));
     }
 
     @Test
@@ -21,27 +20,27 @@ public class ZipcodeHashTest {
         latitudeLongitude.add("40.430919");
         latitudeLongitude.add("-79.92569");
 
-        assertEquals(latitudeLongitude, ZipcodeHash.toLatitudeLongitude("15217"));
+        assertEquals(latitudeLongitude, Zipcode.toLatitudeLongitude("15217"));
     }
 
     @Test
     public void testToLatitude() {
-        assertEquals("40.430919", ZipcodeHash.toLatitude("15217"));
+        assertEquals("40.430919", Zipcode.toLatitude("15217"));
     }
 
     @Test
     public void testToLongitude() {
-        assertEquals("-79.92569", ZipcodeHash.toLongitude("15217"));
+        assertEquals("-79.92569", Zipcode.toLongitude("15217"));
     }
 
     @Test
     public void testToGMTOffset() {
-        assertEquals("-5", ZipcodeHash.toGMTOffset("15217"));
+        assertEquals("-5", Zipcode.toGMTOffset("15217"));
     }
 
     @Test
     public void testObservesDST() {
-        assertEquals(true, ZipcodeHash.observesDST("15217"));
+        assertEquals(true, Zipcode.observesDST("15217"));
     }
 
 }

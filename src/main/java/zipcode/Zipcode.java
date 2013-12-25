@@ -6,7 +6,7 @@ import Region.Region;
 import java.util.ArrayList;
 
 
-public class ZipcodeHash {
+public class Zipcode {
 
     public static String toRegion(String zip) {
         Region currentRegion = Area.zipcodes.get(zip);
